@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action='/results' method = 'post'>
+
+  <style>
+    .important-paragraph{
+      color: #47597E;
+    }
+    .center {
+      text-align: center;
+      list-style-position: inside;
+    }
+ </style>
+
+  <p class = 'important-paragraph form-inputs'>
+    <label for='n'>Ratio of Nitrogen Content </label>
+    <input type='int' name = 'N' id='n' placeholder="Enter a value (ex: 90)"/>
+  </p>
+    
+  <p class = 'important-paragraph form-inputs'>
+    <label for='p'>Ratio of Pohsphorous Content </label>
+    <input type='int' name = 'P' id='p' placeholder="Enter a value (ex: 40)"/>
+  </p>
+
+  <p class = 'important-paragraph form-inputs'>
+    <label for='k'>Ratio of Potassium Content </label>
+    <input type='int' name = 'K' id='k' placeholder="Enter a value (ex: 50)"/>
+  </p>
+    
+  <p class = 'important-paragraph form-inputs'>
+    <label for='temp'>Temperature (°C) </label>
+    <input type='float' name = 'temperature' id='temp' placeholder="Enter a value"/>
+  </p>
+    
+  <p class = 'important-paragraph form-inputs'>
+    <label for='humidity'>Relative Humidity (%) </label>
+    <input type='float' name = 'humidity' id='humidity' placeholder="Enter a value"/>
+  </p>
+    
+  <p class = 'important-paragraph form-inputs'>
+    <label for='ph'>PH Value of Soil </label>
+    <input type='float' name = 'ph' id='ph'/ placeholder="Enter a value">
+  </p>
+    
+  <p class = 'important-paragraph form-inputs'>
+    <label for='rain'>Rainfall (mm) </label>
+    <input type='float' name = 'rainfall' id='rain' placeholder="Enter a value"/>
+  </p>
+
+  <input class="center" type='submit' value='Recommend!'/>
+</form>
+{% endblock content %}

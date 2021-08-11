@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+  h1, h3 {
+  color: #515E63;
+  text-align: center;
+  }
+  p {
+  color: #47597E; 
+  height:80;
+  text-align: center;
+  }
+  ol {
+  color: #515E63; 
+  height:80;
+  text-align: center;
+  }
+  li, h4, h5 {
+  color: #47597E; 
+  height:80;
+  text-align: center;
+  }
+  .center {
+  text-align: center;
+  list-style-position: inside;
+  }
+  .styled-table {
+    background-color: #d9d49c;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+  .styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: center;
+  }
+  .styled-table th,
+  .styled-table td {
+    padding: 12px 15px;
+  }
+  .styled-table tbody tr {
+    border-bottom: 1px solid #8693ab;
+  }
+  .styled-table tbody tr:nth-of-type(even) {
+    background-color: #57837B;
+  }
+</style>
+
+    <h1>
+        Possible Alternative Crops
+    </h1>
+
+    <h5>
+        Using the ratio of nitrogen, phosphorous, potassium, and ph value of your soil as well as ph temperature, humidity and rainfall we've determined the three best possible alternative crops for <b>{{input_crop}}</b>.
+    </h5>
+
+    <h3 align="center">Recommendations:</h4>
+    <ol class="center">
+        <b>
+        <li><h4>{{recommendation1}}</h4></li>
+        <li><h4>{{recommendation2}}</h4></li>
+        <li><h4>{{recommendation3}}</h4></li>
+        </b>
+    </ol>
+
+     <table class='styled-table'>
+        <tr>
+            <th>Crop Label</th>
+                {% for col in avgs.columns %}
+            <th>{{col}}</th>
+                {% endfor %}
+        </tr>
+        <tr>
+            {% for i, row in avgs.iloc[0:].iterrows() %}
+        <td>{{i}}</td>
+            {% for entry in row %}
+        <td>{{ entry }}</td>
+            {% endfor %}
+        </tr>
+            {% endfor %}
+      </table>
+
+    <form class="center" action="{{url_for('crop_recommendation')}}">
+        <input type="submit" value="Try Again?" />
+    </form>
+{% endblock content %}

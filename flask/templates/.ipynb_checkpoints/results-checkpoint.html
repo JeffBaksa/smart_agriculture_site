@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+  h1, h4 {
+  color: #515E63;
+  text-align: center;
+  }
+  p {
+  color: #47597E; 
+  height:80;
+  text-align: center;
+  }
+  .center {
+  text-align: center;
+  list-style-position: inside;
+  }
+</style>
+
+    <h1>
+        Crop Recommendation: {{prediction}}
+    </h1>
+
+    <img src= {{image}} style="width:100%">
+    
+    <div>{{text | safe}}</div>
+
+    <form class="center" action="{{url_for('predict')}}">
+        <input type="submit" value="Predict Again?" />
+    </form>
+{% endblock content %}

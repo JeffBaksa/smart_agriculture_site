@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+  h1, h4 {
+  color: #515E63;
+  text-align: center;
+  }
+  ol {
+  color: #515E63; 
+  height:80;
+  text-align: center;
+  }
+  li {
+  color: #47597E; 
+  height:80;
+  text-align: center;
+  }
+  .center {
+  text-align: center;
+  list-style-position: inside;
+  }
+</style>
+
+<h1>
+    Sorry, this crop isn't currently available in our recommender.
+</h1>
+
+<h4 align="center"> Try inputing one of the crops from below... </h4>
+    <ol class="center">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Blackgram</li>
+        <li>Chickpea</li>
+        <li>Coconut</li>
+        <li>Coffee</li>
+        <li>Cotton</li>
+        <li>Grapes</li>
+        <li>Jute</li>
+        <li>Kidneybeans</li>
+        <li>Lentil</li>
+        <li>Maize</li>
+        <li>Mango</li>
+        <li>Mothbeans</li>
+        <li>Mungbean</li>
+        <li>Muskmelon</li>
+        <li>Orange</li>
+        <li>Papaya</li>
+        <li>Pigeonpeas</li>
+        <li>Pomegranate</li>
+        <li>Rice</li>
+        <li>Watermelon</li>
+    </ol>
+    &nbsp; 
+    &nbsp;
+<h4 class="center"> Apologies for the inconvenience.</h4>
+    &nbsp; 
+    &nbsp;
+    <form action="{{url_for('crop_recommendation')}}">
+        <input type="submit" value="Try Again?" />
+    </form>
+{% endblock content %}

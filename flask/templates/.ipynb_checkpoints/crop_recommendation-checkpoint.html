@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action='/rec_results' method = 'post'>
+
+  <style>
+    .important-paragraph{
+      color: #47597E;
+    }
+  </style>
+
+  <p class = 'important-paragraph form-inputs'>
+    <label for='cr'>Current Crop: </label>
+    <input type='str' name ='crop_recc' id='cr' placeholder="Enter Name of Crop"/>
+  </p>
+
+  <p> <input type='submit' value='Recommend Alternatives'/></p>
+</form>
+{% endblock content %}
