@@ -1,10 +1,21 @@
 # Capstone 3 - Smart Agriculture Web App
 
-## Application / Motivation
+<p align="center"> <a href="https://docs.google.com/presentation/d/1KAkEn1OVkcz-o8CaPo79F3D_5jr0Dh-db_b8IXTFoY0/edit#slide=id.p">Presentation</a></p>
+
+## Table of Contents
+- [Background](#background)
+- [Data](#data)
+- [Recommender(s)](#choosing-crops-based-on-growing-conditions)
+- [Disease Detection](#disease-detection)
+- [Web App](#web-app)
+- [Future Steps](#future-steps)
+- [Technologies Used](#technologies-used)
+
+## Background
 Globally, approximately 27% of the world (two billion people) rely on agriculture for livelihoods across 570 million farms
 More than 90% of these farms are run by an individual or family. It's also projected that the world will need to raise its food production by 60-70% to feed more than nine billion people by 2050. With this in mind I wanted to create a basic web app to help provide those small farmers with more advanced tools that'll help them use their land more efficiently and prepare for the projected increase in demand.
 
-## Datasets Used
+## Data
 
 1. The first dataset used can be found [here](https://www.kaggle.com/atharvaingle/crop-recommendation-dataset). It includes 22 unique crops and 7 column values that correspond with the ratio of nitrogen, phosphorus, and potassium values for the soil as well as the ph value. Additionally it includes the temperature, humidity, and rainfall of the environment. It's worth noting that this dataset was gathered in India so the recommendations you'll see are applicable there, but most likely not in the U.S. If growing condition data was more widely collected then this project could be made more general for the entire world, but for now it's main purpose is to show off the potential.
 
@@ -46,6 +57,7 @@ The resulting webpage will inform the farmer on possible causes of the disease a
 ![healthy result](img/healthy_result.png)
 
 If the plant is free of the disease it will also inform the user and they can carry on with all normal operations.
+
 
 ## Future Steps
 A list of steps I want to implement in the future... 
